@@ -16,8 +16,8 @@ export default function App() {
     <>
       <StatusBar style="auto" />
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Navigator screenOptions={{headerShown: false}}>
+          <Stack.Screen name="HomeScreen" component={HomeScreen}  />
           <Stack.Screen name="AccountScreen" component={AccountScreen} />
           <Stack.Screen name="FriendScreen" component={FriendScreen} />
           <Stack.Screen name="LogInScreen" component={LogInScreen} />
