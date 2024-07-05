@@ -8,6 +8,7 @@ import {
   Dimensions,
 } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 // This file contains the contents of the header for the home screen.
 // Consists of 3 things... Friends button that sends you to the friends screen, munch logo, and profile
@@ -19,22 +20,23 @@ const friendIconSize = 30;
 const profileImageSize = 45;
 
 function HomeScreenHeader() {
-  function button1handler() {
+  const navigation = useNavigation();
+  function friendsIconHandler() {
     // This function is called if the friends icon is pressed.
     // Sends the user to the friends screen.
-    console.log("working");
+    navigation.navigate("FriendsScreen");
   }
 
-  function button2handler() {
+  function profileIconHandler() {
     // This function is called if the profile icon is pressed.
     // Ssends the user to the profile screen.
-    console.log("working2");
+    navigation.navigate("ProfileScreen");
   }
 
   return (
     <View style={styles.headerContainer}>
       <View style={styles.friendsIconContainer}>
-        <Pressable onPress={button1handler}>
+        <Pressable onPress={friendsIconHandler}>
           <FontAwesome5
             name="user-friends"
             size={friendIconSize}
@@ -51,7 +53,7 @@ function HomeScreenHeader() {
       </View>
 
       <View style={styles.profileIconContainer}>
-        <Pressable onPress={button2handler}>
+        <Pressable onPress={profileIconHandler}>
           <Image
             source={require("../assets/profilepicture.png")}
             style={styles.profileImage}

@@ -1,7 +1,16 @@
-import { Text } from "react-native";
+import { Button, Text, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 function FriendsScreen() {
-  return <Text>FriendsScreen</Text>;
+  navigation = useNavigation();
+  function backButtonHandler() {
+    navigation.pop()
+  }
+
+  return <View>
+    <Button title="Back" onPress={backButtonHandler} />
+    <Text>FriendsScreen</Text>
+  </View>;
 }
 
 export default FriendsScreen;
