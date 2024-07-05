@@ -7,5 +7,6 @@ To run, make sure you have expo installed, along with:
 - npm install @react-navigation/stack
 - npx expo install react-native-gesture-handler
 
-Once the requirements are installed, run 
+Once the requirements are installed, to run:
+- change directory to munchv2/munch
 - npx expo start (or "npx expo start --tunnel" if you are on public wifi)
