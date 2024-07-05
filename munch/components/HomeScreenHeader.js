@@ -36,7 +36,10 @@ function HomeScreenHeader() {
   return (
     <View style={styles.headerContainer}>
       <View style={styles.friendsIconContainer}>
-        <Pressable onPress={friendsIconHandler}>
+        <Pressable
+          onPress={friendsIconHandler}
+          style={({ pressed }) => (pressed ? styles.iconPressed : null)}
+        >
           <FontAwesome5
             name="user-friends"
             size={friendIconSize}
@@ -53,7 +56,10 @@ function HomeScreenHeader() {
       </View>
 
       <View style={styles.profileIconContainer}>
-        <Pressable onPress={profileIconHandler}>
+        <Pressable
+          onPress={profileIconHandler}
+          style={({ pressed }) => (pressed ? styles.iconPressed : null)}
+        >
           <Image
             source={require("../assets/profilepicture.png")}
             style={styles.profileImage}
@@ -94,5 +100,8 @@ const styles = StyleSheet.create({
     width: profileImageSize,
     height: profileImageSize,
     borderRadius: 30,
+  },
+  iconPressed: {
+    opacity: 0.5,
   },
 });
