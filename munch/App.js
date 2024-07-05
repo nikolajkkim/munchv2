@@ -4,8 +4,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 
 import HomeScreen from "./screens/HomeScreen";
-import AccountScreen from "./screens/AccountScreen";
-import FriendScreen from "./screens/FriendScreen";
+import AccountScreen from "./screens/ProfileScreen";
+import FriendScreen from "./screens/FriendsScreen";
 import LogInScreen from "./screens/LogInScreen";
 import MunchMapScreen from "./screens/HomeScreen";
 
