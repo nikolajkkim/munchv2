@@ -4,6 +4,7 @@ import Profile from "../models/Profile";
 
 import { Button, ScrollView, Text } from "react-native";
 import { useContext, useEffect } from "react";
+import { PROFILES } from "../data/DummyData";
 
 
 function HomeScreen() {
@@ -13,7 +14,8 @@ function HomeScreen() {
   // The purpose of this code is to set the default profile that is currently logged into the app.
   // This can be set later during login time but for now we are setting it here.
   useEffect(() => {
-    const userProfile = new Profile("custo", require("../assets/profilepicture.png"))
+    // const userProfile = new Profile("custo", require("../assets/profilepicture.png"))
+    const userProfile = PROFILES[0]
     profileContext.setUsernameTo(userProfile.getUsername());
     profileContext.setPhotoTo(userProfile.getPhoto());
   }, []);
