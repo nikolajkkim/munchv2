@@ -1,3 +1,5 @@
+import { ProfileContext } from "../context/profile-context";
+
 import {
   Text,
   Button,
@@ -9,6 +11,7 @@ import {
 } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import { useContext } from "react";
 
 // This file contains the contents of the header for the home screen.
 // Consists of 3 things... Friends button that sends you to the friends screen, munch logo, and profile
@@ -20,7 +23,9 @@ const friendIconSize = 30;
 const profileImageSize = 45;
 
 function HomeScreenHeader() {
+  const profileContext = useContext(ProfileContext);
   const navigation = useNavigation();
+
   function friendsIconHandler() {
     // This function is called if the friends icon is pressed.
     // Sends the user to the friends screen.
@@ -36,6 +41,8 @@ function HomeScreenHeader() {
   return (
     <View style={styles.headerContainer}>
       <View style={styles.friendsIconContainer}>
+
+        {/* This is top left friends icon button */}
         <Pressable
           onPress={friendsIconHandler}
           style={({ pressed }) => (pressed ? styles.iconPressed : null)}
@@ -48,20 +55,22 @@ function HomeScreenHeader() {
         </Pressable>
       </View>
 
+      {/* This is center munch logo */}
       <View style={styles.munchLogoContainer}>
         <Image
-          source={require("../assets/munchlogo.png")}
+          source={require('../assets/munchlogo.png')}
           style={styles.munchLogo}
         />
       </View>
 
+      {/* This is top right profile icon button */}
       <View style={styles.profileIconContainer}>
         <Pressable
           onPress={profileIconHandler}
           style={({ pressed }) => (pressed ? styles.iconPressed : null)}
         >
           <Image
-            source={require("../assets/profilepicture.png")}
+            source={profileContext.profilePhoto}
             style={styles.profileImage}
           />
         </Pressable>
