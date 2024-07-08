@@ -1,10 +1,11 @@
 import { ProfileContext } from "../context/profile-context";
-import HomeScreenHeader from "../components/HomeScreenHeader";
+import HomeScreenHeader from "../components/homescreen/HomeScreenHeader";
 import Profile from "../models/Profile";
+import { POSTS, PROFILES } from "../data/DummyData";
+import Post from "../components/homescreen/Post";
 
-import { Button, ScrollView, Text } from "react-native";
+import { Button, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useContext, useEffect } from "react";
-import { PROFILES } from "../data/DummyData";
 
 
 function HomeScreen() {
@@ -15,19 +16,30 @@ function HomeScreen() {
   // This can be set later during login time but for now we are setting it here.
   useEffect(() => {
     // const userProfile = new Profile("custo", require("../assets/profilepicture.png"))
-    const userProfile = PROFILES[0]
+    const userProfile = PROFILES[0];
     profileContext.setUsernameTo(userProfile.getUsername());
     profileContext.setPhotoTo(userProfile.getPhoto());
   }, []);
   // ------TEMPORARY CODE UNTIL LOGIN IS CREATED------
 
   return (
-    <ScrollView>
+    <View style={styles.homescreenContainer}>
       <HomeScreenHeader />
-      <Text>User logged in username: {profileContext.profileUsername}</Text>
-      <Text>User logged in photo path: {profileContext.profilePhoto}</Text>
-    </ScrollView>
+      <ScrollView>
+        <View>
+          {POSTS.map((post) => (
+            <Post content={post} key={post.getPostID()} />
+          ))}
+        </View>
+      </ScrollView>
+    </View>
   );
 }
 
 export default HomeScreen;
+
+const styles = StyleSheet.create({
+  homescreenContainer: {
+    flex: 1,
+  }
+})

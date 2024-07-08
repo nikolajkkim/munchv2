@@ -19,7 +19,12 @@ export default function App() {
       <SafeAreaView style={styles.rootScreen}>
         <ProfileContextProvider>
           <NavigationContainer>
-            <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Navigator
+              screenOptions={{
+                headerShown: false,
+                cardStyle: { backgroundColor: "white" },
+              }}
+            >
               <Stack.Screen name="HomeScreen" component={HomeScreen} />
               <Stack.Screen name="ProfileScreen" component={AccountScreen} />
               <Stack.Screen

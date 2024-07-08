@@ -1,4 +1,4 @@
-import { ProfileContext } from "../context/profile-context";
+import { ProfileContext } from "../../context/profile-context";
 
 import {
   Text,
@@ -58,7 +58,7 @@ function HomeScreenHeader() {
       {/* This is center munch logo */}
       <View style={styles.munchLogoContainer}>
         <Image
-          source={require('../assets/munchlogo.png')}
+          source={require('../../assets/munchlogo.png')}
           style={styles.munchLogo}
         />
       </View>
