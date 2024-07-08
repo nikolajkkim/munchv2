@@ -16,9 +16,10 @@ export default function App() {
   return (
     <>
       <StatusBar style="auto" />
-      <SafeAreaView style={styles.rootScreen}>
+      <View style={styles.rootScreen}>
         <ProfileContextProvider>
           <NavigationContainer>
+          <SafeAreaView style={styles.safeAreaTop} ></SafeAreaView>
             <Stack.Navigator
               screenOptions={{
                 headerShown: false,
@@ -39,7 +40,7 @@ export default function App() {
             </Stack.Navigator>
           </NavigationContainer>
         </ProfileContextProvider>
-      </SafeAreaView>
+      </View>
     </>
   );
 }
@@ -48,4 +49,7 @@ const styles = StyleSheet.create({
   rootScreen: {
     flex: 1,
   },
+  safeAreaTop:{
+    flex: 0,
+  }
 });

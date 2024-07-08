@@ -11,15 +11,28 @@ function Post({ content }) {
   return (
     <View style={styles.postContainer}>
       <PostHeader content={content} />
+      <View style={styles.postImageContainer}>
+        <Image source={content.getImage()} style={styles.postImage} />
+      </View>
     </View>
   );
 }
 
 export default Post;
 
+const deviceWidth = Dimensions.get("window").width;
 const styles = StyleSheet.create({
   postContainer: {
     flex: 1,
     margin: 20,
+  },
+  postImageContainer:{
+    alignItems: 'center',
+    marginTop: 10
+  },
+  postImage: {
+    width: deviceWidth,
+    height: deviceWidth*(4/3), // 4:3 aspect ratio, adjust as needed
+    borderRadius: 10,
   },
 });
