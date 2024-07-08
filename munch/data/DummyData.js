@@ -10,6 +10,6 @@ export const PROFILES = [
 ];
 
 export const POSTS = [
-  new Post(1, PROFILES[0], new Date(), 4.5, require("../assets/post-photos/postphoto1.jpg"), "Nüdae Coffee", "yummy yummy"),
+  new Post(1, PROFILES[1], new Date(), 4.5, require("../assets/post-photos/postphoto1.jpg"), "Nüdae Coffee", "yummy yummy"),
   new Post(2, PROFILES[3], new Date(), 3.5, require("../assets/post-photos/postphoto2.jpg"), "Coco Ichibanya", "mid look at that small chicken")
 ]
