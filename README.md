@@ -6,6 +6,8 @@ To run, make sure you have expo installed, along with:
 - npx expo install react-native-screens react-native-safe-area-context
 - npm install @react-navigation/stack
 - npx expo install react-native-gesture-handler
+- npm install react-native-stars --save
+
 
 Once the requirements are installed, to run:
 - change directory to munchv2/munch
