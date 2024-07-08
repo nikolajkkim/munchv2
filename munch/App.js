@@ -16,10 +16,16 @@ export default function App() {
   return (
     <>
       <StatusBar style="auto" />
-      <SafeAreaView style={styles.rootScreen}>
+      <View style={styles.rootScreen}>
         <ProfileContextProvider>
           <NavigationContainer>
-            <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <SafeAreaView style={styles.safeAreaTop}></SafeAreaView>
+            <Stack.Navigator
+              screenOptions={{
+                headerShown: false,
+                cardStyle: { backgroundColor: "white" },
+              }}
+            >
               <Stack.Screen name="HomeScreen" component={HomeScreen} />
               <Stack.Screen name="ProfileScreen" component={AccountScreen} />
               <Stack.Screen
@@ -34,7 +40,7 @@ export default function App() {
             </Stack.Navigator>
           </NavigationContainer>
         </ProfileContextProvider>
-      </SafeAreaView>
+      </View>
     </>
   );
 }
@@ -42,5 +48,8 @@ export default function App() {
 const styles = StyleSheet.create({
   rootScreen: {
     flex: 1,
+  },
+  safeAreaTop: {
+    flex: 0,
   },
 });

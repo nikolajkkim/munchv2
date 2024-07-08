@@ -1,9 +1,15 @@
+import Post from "../models/Post";
 import Profile from "../models/Profile";
 
 export const PROFILES = [
-  new Profile("custo", require("../assets/profilepicture.png")),
-  new Profile("nikolaj", require("../assets/profilepicture.png")),
-  new Profile("jamie", require("../assets/profilepicture.png")),
-  new Profile("steven", require("../assets/profilepicture.png")),
-  new Profile("jake", require("../assets/profilepicture.png")),
+  new Profile("custo", require("../assets/profile-photos/profilephoto1.png")),
+  new Profile("nikolaj", require("../assets/profile-photos/profilephoto1.png")),
+  new Profile("jamie", require("../assets/profile-photos/profilephoto1.png")),
+  new Profile("steven", require("../assets/profile-photos/profilephoto2.png")),
+  new Profile("jake", require("../assets/profile-photos/profilephoto1.png")),
 ];
+
+export const POSTS = [
+  new Post(1, PROFILES[1], new Date(), 4.5, require("../assets/post-photos/postphoto1.jpg"), "Nüdae Coffee", "yummy yummy"),
+  new Post(2, PROFILES[3], new Date(), 3.5, require("../assets/post-photos/postphoto2.jpg"), "Coco Ichibanya", "mid look at that small chicken")
+]
