@@ -13,9 +13,11 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { useContext } from "react";
 
+// --------------- FILE SUMMARY ---------------
 // This file contains the contents of the header for the home screen.
-// Consists of 3 things... Friends button that sends you to the friends screen, munch logo, and profile
-// icon that sends you to the profile screen.
+// Consists of 1. Friends button that sends you to the friends screen, 2. munch logo, and 3. profile
+// icon that sends you to the profile screen. 
+// This component is probably used in the HomeScreen.js file.
 
 // Constants to adjust if you want to change icon sizes.
 const deviceWidth = Dimensions.get("window").width;

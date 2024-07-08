@@ -7,11 +7,16 @@ import Post from "../components/homescreen/Post";
 import { Button, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useContext, useEffect } from "react";
 
+// --------------- FILE SUMMARY ---------------
+// This file is the source of the home screen. 
+// Trying to keep this file as clean as possible, we have turned almost everything including HomeScreenHeader and Post
+// into a component. check components/homescreen for all the components we have created
+// for this file. 
 
 function HomeScreen() {
   const profileContext = useContext(ProfileContext);
 
-  // ------TEMPORARY CODE UNTIL LOGIN IS CREATED------
+  // ------TEMPORARY CODE UNTIL LOGIN IS CREATED START------
   // The purpose of this code is to set the default profile that is currently logged into the app.
   // This can be set later during login time but for now we are setting it here.
   useEffect(() => {
@@ -20,7 +25,7 @@ function HomeScreen() {
     profileContext.setUsernameTo(userProfile.getUsername());
     profileContext.setPhotoTo(userProfile.getPhoto());
   }, []);
-  // ------TEMPORARY CODE UNTIL LOGIN IS CREATED------
+  // ------TEMPORARY CODE UNTIL LOGIN IS CREATED END------
 
   return (
     <View style={styles.homescreenContainer}>
@@ -41,5 +46,5 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   homescreenContainer: {
     flex: 1,
-  }
-})
+  },
+});
