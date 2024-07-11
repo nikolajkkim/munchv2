@@ -2,6 +2,7 @@
 Too munch to handle
 
 To run, make sure you have expo installed, along with: 
+- (MAKE SURE TO CD INTO "MUNCH" FIRST
 - npm install @react-navigation/native
 - npx expo install react-native-screens react-native-safe-area-context
 - npm install @react-navigation/stack
