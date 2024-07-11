@@ -1,13 +1,11 @@
 # munchv2
 Too munch to handle
 
-To run, make sure you have expo installed, along with: 
-- (MAKE SURE TO CD INTO "MUNCH" FIRST
-- npm install @react-navigation/native
-- npx expo install react-native-screens react-native-safe-area-context
-- npm install @react-navigation/stack
-- npx expo install react-native-gesture-handler
-- npm install react-native-stars --save
+To run:
+1. clone
+2. make sure expo is downlaoded
+3. cd into "munch"
+4. npm install
 
 
 Once the requirements are installed, to run:
