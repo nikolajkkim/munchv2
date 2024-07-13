@@ -9,6 +9,7 @@ import FriendScreen from "./screens/FriendsScreen";
 import LogInScreen from "./screens/LogInScreen";
 import MunchMapScreen from "./screens/HomeScreen";
 import ProfileContextProvider from "./context/profile-context";
+import TestLoginScreen from "./screens/TestLoginScreen";
 
 const Stack = createStackNavigator();
 
@@ -26,6 +27,7 @@ export default function App() {
                 cardStyle: { backgroundColor: "white" },
               }}
             >
+              <Stack.Screen name="TestLoginScree" component={TestLoginScreen} />
               <Stack.Screen name="HomeScreen" component={HomeScreen} />
               <Stack.Screen name="ProfileScreen" component={AccountScreen} />
               <Stack.Screen
