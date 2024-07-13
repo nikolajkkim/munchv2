@@ -43,6 +43,5 @@ const styles = StyleSheet.create({
   postImage: {
     width: deviceWidth,
     height: deviceWidth * (4 / 3), // 4:3 aspect ratio, adjust as needed
-    borderRadius: 10,
   }
 });
