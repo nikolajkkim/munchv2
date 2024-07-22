@@ -6,7 +6,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import HomeScreen from "./screens/HomeScreen";
 import AccountScreen from "./screens/ProfileScreen";
 import FriendScreen from "./screens/FriendsScreen";
-import LogInScreen from "./screens/LogInScreen";
+import LoginScreen from "./screens/LoginScreen";
+import LoginDetailScreen from "./screens/LoginDetailScreen";
+import SignUpScreen from "./screens/SignUpScreen";
 import MunchMapScreen from "./screens/HomeScreen";
 import ProfileContextProvider from "./context/profile-context";
 
@@ -21,6 +23,7 @@ export default function App() {
           <NavigationContainer>
             <SafeAreaView style={styles.safeAreaTop}></SafeAreaView>
             <Stack.Navigator
+              initialRouteName="LoginScreen"
               screenOptions={{
                 headerShown: false,
                 cardStyle: { backgroundColor: "white" },
@@ -35,7 +38,9 @@ export default function App() {
                   gestureDirection: "horizontal-inverted",
                 }}
               />
-              <Stack.Screen name="LogInScreen" component={LogInScreen} />
+              <Stack.Screen name="LoginScreen" component={LoginScreen} />
+              <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
+              <Stack.Screen name="LoginDetailScreen" component={LoginDetailScreen} />
               <Stack.Screen name="MunchMapScreen" component={MunchMapScreen} />
             </Stack.Navigator>
           </NavigationContainer>
