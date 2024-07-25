@@ -63,6 +63,7 @@ function SignUpScreen() {
                 <CustomButton 
                     text="Sign Up" 
                     onPress={onSignUpPressed} 
+                    width="30%"
                 />
                 <CustomButton 
                     text="Have an account? Sign in" 

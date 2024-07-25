@@ -63,7 +63,8 @@ function LoginScreen() {
                 
                 <CustomButton 
                     text="Login" 
-                    onPress={onLoginPressed} 
+                    onPress={onLoginPressed}
+                    width="30%"
                 />
                 <CustomButton 
                     text="Forgot Password" 
