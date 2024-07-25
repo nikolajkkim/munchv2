@@ -4,6 +4,7 @@ import Logo from '../../assets/munch.png';
 import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
 import { ScrollView } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 function SignUpScreen() {
     const [username, setUsername] = useState('');
@@ -12,13 +13,15 @@ function SignUpScreen() {
     const [passwordConfirm, setPasswordConfirm] = useState('');
 
     const {height} = useWindowDimensions();
+    const navigation = useNavigation();
 
     function onSignUpPressed () {
-        console.warn("onSignUpPressed");
+        // backend stuff for validating user
+        navigation.navigate('HomeScreen');
     }
 
     function onSignInPressed () {
-        console.warn("onSignInPressed");
+        navigation.navigate('LoginScreen');
     }
 
     return (
