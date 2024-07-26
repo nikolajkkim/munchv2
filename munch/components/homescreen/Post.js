@@ -1,8 +1,9 @@
-import PostHeader from "./PostHeader";
-
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
+
+import PostHeader from "./PostHeader";
 import PostLocation from "./PostLocation";
 import PostCaption from "./PostCaption";
+
 
 // --------------- FILE SUMMARY ---------------
 // This file is the core of what makes a "Post".
@@ -43,6 +44,5 @@ const styles = StyleSheet.create({
   postImage: {
     width: deviceWidth,
     height: deviceWidth * (4 / 3), // 4:3 aspect ratio, adjust as needed
-    borderRadius: 10,
   }
 });

@@ -91,5 +91,6 @@ const styles = StyleSheet.create({
   starContainer: {
     justifyContent: "center",
     alignItems: "center",
+    marginRight: 5
   },
 });
