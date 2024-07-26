@@ -1,11 +1,12 @@
-import { ProfileContext } from "../context/profile-context";
-import HomeScreenHeader from "../components/homescreen/HomeScreenHeader";
-import Profile from "../models/Profile";
-import { POSTS, PROFILES } from "../data/DummyData";
-import Post from "../components/homescreen/Post";
-
 import { Button, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useContext, useEffect } from "react";
+
+import { ProfileContext } from "../context/profile-context";
+import Profile from "../models/Profile";
+import { POSTS, PROFILES } from "../data/DummyData";
+import {HomeScreenHeader, Post} from "../components/homescreen"
+
+
 
 // --------------- FILE SUMMARY ---------------
 // This file is the source of the home screen. 

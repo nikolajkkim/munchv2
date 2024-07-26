@@ -8,9 +8,8 @@ import AccountScreen from "./screens/ProfileScreen";
 import FriendScreen from "./screens/FriendsScreen";
 import MunchMapScreen from "./screens/HomeScreen";
 import ProfileContextProvider from "./context/profile-context";
-
-import LoginScreen from './screens/LoginScreen/LoginScreen';
-import SignUpScreen from './screens/SignUpScreen/SignUpScreen';
+import LoginScreen from './screens/LoginScreen';
+import SignUpScreen from './screens/SignUpScreen';
 
 
 const Stack = createStackNavigator();

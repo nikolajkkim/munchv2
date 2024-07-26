@@ -1,8 +1,9 @@
-import PostHeader from "./PostHeader";
-
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
+
+import PostHeader from "./PostHeader";
 import PostLocation from "./PostLocation";
 import PostCaption from "./PostCaption";
+
 
 // --------------- FILE SUMMARY ---------------
 // This file is the core of what makes a "Post".
